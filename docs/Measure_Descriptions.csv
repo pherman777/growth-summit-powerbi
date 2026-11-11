@@ -1,0 +1,51 @@
+Display Folder,Measure,Description
+Base,Attendees,Distinct count of accounts (BAccount ID) that attended the selected event(s).
+Base,Total GI,"Sum of Total GI. Source values are account lifetime totals, not revenue attributed to the event."
+Base,Total Orders,Sum of Total Orders for attending accounts.
+Base,Total Qty Ordered,Sum of Total Quantity Ordered for attending accounts.
+Base,Total Calls,Sum of Total Calls logged for attending accounts.
+Base,DM20 Impressions,Sum of DM20 impressions.
+Base,FBK Impressions,Sum of Facebook impressions.
+Base,DM20 Clicks,Sum of DM20 clicks.
+Base,FBK Clicks,Sum of Facebook clicks.
+Base,Total Impressions,DM20 Impressions + FBK Impressions.
+Base,Total Clicks,DM20 Clicks + FBK Clicks.
+Ratios,GI per Attendee,Total GI / Attendees. Average GI per attending account.
+Ratios,Avg Order Value,Total GI / Total Orders.
+Ratios,Qty per Order,Total Qty Ordered / Total Orders.
+Marketing,DM20 CTR,DM20 Clicks / DM20 Impressions.
+Marketing,FBK CTR,FBK Clicks / FBK Impressions.
+Marketing,Overall CTR,Total Clicks / Total Impressions.
+Marketing,Channel Impressions,Returns DM20 or FBK impressions based on the Channel table row in context (disconnected table + SWITCH).
+Marketing,Channel Clicks,Returns DM20 or FBK clicks based on the Channel table row in context.
+Marketing,Channel CTR,Channel Clicks / Channel Impressions.
+Marketing,Marketing Reach %,Share of attendees with at least one DM20 or FBK impression.
+Conversion,Attendees With Orders,Attendees with Total Orders > 0.
+Conversion,% Attendees Ordered,Attendees With Orders / Attendees.
+Conversion,Orders In Progress,Attendees whose Current Order In Progress flag is true.
+Conversion,% In Progress,Orders In Progress / Attendees.
+Conversion,Gone To Qual,Attendees whose Gone To Qual flag is true.
+Conversion,% Gone To Qual,Gone To Qual / Attendees.
+Event Comparison,Prev Event GI,Total GI for the event immediately before the current event (by Event Date). Blank for the first event.
+Event Comparison,GI vs Prev Event %,% change in Total GI vs the previous event. Only returns a value when one event is in context.
+Event Comparison,Prev Event Attendees,Attendees for the event immediately before the current event.
+Event Comparison,Attendees vs Prev Event %,% change in Attendees vs the previous event. Single-event context only.
+KPI Labels,Attendees Change Label,"Card reference label text: arrow + % change vs prior event, or a prompt when no single event is selected."
+KPI Labels,Attendees Change Color,"Hex color for Attendees Change Label (green up, red down, grey neutral). Used via conditional formatting."
+KPI Labels,GI Change Label,Card reference label text for Total GI vs prior event.
+KPI Labels,GI Change Color,Hex color for GI Change Label.
+KPI Labels,Orders Change Label,Card reference label text for Total Orders vs prior event (prior value computed inline).
+KPI Labels,Orders Change Color,Hex color derived from the arrow in Orders Change Label.
+KPI Labels,Quantity Change Label,Card reference label text for Total Qty Ordered vs prior event.
+KPI Labels,Quantity Change Color,Hex color derived from the arrow in Quantity Change Label.
+KPI Labels,Pct Ordered Change Label,"Card reference label text for % Attendees Ordered, shown as percentage-point change vs prior event."
+KPI Labels,Pct Ordered Change Color,Hex color derived from the arrow in Pct Ordered Change Label.
+Display,Selected Events Label,"Text of the current event selection: All Events, up to two event names in date order, or 'N Events Selected'."
+Display,Detail Context,"Attendee Detail subtitle: Selected Events Label plus any drill-through State, Sales Rep and Order Status."
+Display,Bar Color,"Hex color for the trend chart: pink for the most recent event, navy for all others."
+Rankings,Rep GI Rank,Dense rank of Sales Reps by Total GI within the current selection. Blank outside a rep row.
+Rankings,AM GI Rank,Dense rank of Account Managers by Total GI within the current selection.
+Sales,Reps Active,Number of Sales Reps with at least one attendee in context.
+Sales,Avg GI per Rep,Total GI / Reps Active.
+Sales,Top Rep,Sales Rep with the highest Total GI in context.
+Sales,GI per Call,Total GI / Total Calls.
